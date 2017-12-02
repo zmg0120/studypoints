@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script>
+	/*闭包 内部函数访问外部变量*/
+		var g = "gggg";
+		(function outArg(out){
+			var o = "oooo";
+			(function innerArg(inner){
+				var i = "iiiii";
+				console.log(inner);
+				console.log(out);
+				console.log(i);
+				console.log(o);
+				console.log(g);
+			})(2)
+		})(3)
+	
+
+	/*阿里面试题*/
+		var func = (
+			function(a){
+				this.a = a;
+				return function(a){
+					a += this.a;
+					return a;
+				}
+				})
+		(	function(a,b){
+					return a;
+				}(1,2)			
+		);
+		func(4)
+		/* func = 匿名函数的return的函数 即匿名函数的返回值 */
+
+		
+
+	/*闭包题目*/
+		(function(x) {
+		    return (function(y) {
+		        console.log(x);
+		    })(2)
+		})(1);
+		// 输出结果是1，尽管x值在内部函数里没有设置。
+		// 在JavaScript中，闭包是作为内部函数实现的，也就是一个函数定义在另一个函数内部，闭包的重要特性是内部函数能够访问外部函数的变量。在这个例子中，尽管x没有在内部函数定义，在外部函数里找到了定义的值为1的x变量。
+
+
+	/*闭包的应用*/
+		for (var i = 0; i < 5; i++) {
+  			setTimeout(function() { console.log(i); }, i * 1000 );
+		}
+		// 例子显示的结果不是预想的0，1，2，3和4.而是5，5，5，5和5.原因是每个执行的函数在循环完全执行完成后，i最后的赋值是5.闭包的方式可以解决这个问题，在每个循环中为次的循环变量创建一个唯一域，如下：
+		for (var i = 0; i < 5; i++) {
+		(function(x) {
+		     setTimeout(function() { console.log(x); }, x * 1000 );
+		    })(i);
+		}
+		// 则结果将会是0，1，2，3，4.
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
