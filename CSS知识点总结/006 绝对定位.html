@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>047-网页布局-绝对定位.html</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .box1 {
+        background-color: red;
+    }
+
+    .box2 {
+        background-color: green;
+        /*position: relative;
+			top:10px;
+			left:10px;*/
+        position: absolute;
+        top: 0px;
+        /*left: 0px;*/
+        right: 0px;
+        /*bottom: 0px;*/
+    }
+
+    .box3 {
+        background-color: blue;
+        width: 150px;
+        height: 150px;
+    }
+
+    .father {
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+        position: relative;
+        margin:20px;
+        border: 10px solid #000;
+        padding:20px;
+        /*position: absolute;*/
+        /*position: fixed;*/
+    }
+    .grandpa{
+    	width: 400px;
+    	height: 400px;
+    	background: pink;
+    	/*position: relative;*/
+    }
+    span{
+    	width: 100px;
+    	height: 100px;
+    	background-color: red;
+    	position: absolute;
+    }
+    .box4{
+    	background-color: red;
+    	position: absolute;
+    	right: 10px;
+    	bottom: 10px;
+    }
+    </style>
+</head>
+
+<body>
+<!--
+1.什么是绝对定位？
+绝对定位就是相对于父级元素发生位置的移动
+
+2.注意点
+2.1 只写position: absolute;，元素是不会发生任何移动的
+2.2 position: absolute;要配合四条边的距离来一起使用
+top
+right
+bottom
+left
+四条边的距离可以写一个，也可以写两个，写两个的时候要注意同一个方向的只能设置一个边
+2.3 绝对定位元素是脱离标准流的，所以标准流中的空间会被释放出来
+2.4 绝对定位元素是脱离标准流的,所以他不区分块状，行内，行内块状
+
+2.5 绝对元素会参考父级元素发生移动，子元素会找他的父亲，看有没有postion属性，如果没有，就找他的父亲的父亲，直到找到第一个具有position属性的祖先，如何相对于该祖先发生位置移动，如果所有祖先都没有position属性，就相对于body,这个需要参考的父级元素的position属性可以是相对定位，绝对定位和固定定位
+
+2.6 默认状态下绝对元素是参考浏览器的可视区域的位置
+
+2.7 父元素的margin/border/padding的值对绝对定位的子元素的位置没有影响
+
+3.绝对定位和相对定位的区别
+3.1 绝对定位脱离标准流，相对定位不脱离标准流
+3.2 绝对定位用position: absolute; 相对定位用position: relative;
+-->
+	
+<!--     <div class="box1"></div>
+    <div class="grandpa"> -->
+        <div class="father">
+            <div class="box2"></div>
+        </div>
+<!--     </div> -->
+    <!-- <div class="box3"></div> -->
+    <!-- <div class="box4"></div> -->
+    <!-- <span>我是span</span> -->
+</body>
+
+</html>

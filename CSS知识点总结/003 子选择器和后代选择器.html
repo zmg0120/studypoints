@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		/*
+		子选择器：box1的子元素中所有p标签
+		*/
+		.box1 > p{
+			color: red;
+		}
+		/*
+		后代选择器：box1的子元素及子元素的子元素
+		*/
+		.box1 p{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+		<div>
+			<p>11</p>
+			<p>22</p>
+			<p>33</p>
+		</div>
+	</div>
+</body>
+</html>

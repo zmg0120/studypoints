@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>072-边框圆角.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			margin: 50px auto;
+			border: 10px solid #000;
+			/*border-radius: 20px;*/
+			/*border-radius: 20px 30px 40px;*/
+			border-top-left-radius: 20px;
+			border-top-right-radius: 30px;
+			border-bottom-right-radius: 40px;
+			border-bottom-left-radius: 50px;
+		}
+	</style>
+</head>
+<body>
+<!--
+1.圆角是设置给边框的
+
+2.设置圆角的复合写法
+2.1 复合设置圆角的顺序是左上，右上，右下，左下的顺时针方向
+2.2 如果省略取对角的值
+
+3.单一样式
+border-top-left-radius: 20px;
+border-top-right-radius: 30px;
+border-bottom-right-radius: 40px;
+border-bottom-left-radius: 50px;
+-->
+	<div></div>
+</body>
+</html>

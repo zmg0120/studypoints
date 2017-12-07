@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>058-2d转换改变旋转轴向.html</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        width: 600px;
+        /*height: 800px;*/
+        /*border: 1px solid #000;*/
+        margin: 50px auto;
+        perspective: 500px;
+    }
+
+    ul li {
+        list-style: none;
+        width: 150px;
+        height: 200px;
+        margin-top: 20px;
+        /*background-color: red;*/
+        border: 1px solid #000;
+    }
+
+    ul li img {
+        width: 150px;
+        height: 200px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+    }
+
+    ul li:nth-child(1) img {
+        transform: rotateX(45deg);
+    }
+
+    ul li:nth-child(2) img {
+        transform: rotateY(45deg);
+    }
+    ul li:nth-child(3) img {
+        /*transform: rotateZ(45deg);*/
+        transform: rotate(45deg);
+    }
+    </style>
+</head>
+<!--
+1.2D转换元素旋转是默认的轴向是Z轴，也就是面向于我们自己的那个轴向
+
+2.可以通过roteate+大写的轴向来改变默认的旋转轴向
+rotateX 旋转元素沿着水平方向旋转
+rotateY 旋转元素沿着垂直方向旋转
+rotateZ 旋转元素沿着面向自己的方向旋转
+
+3.什么是透视属性？
+通过给父元素添加perspective属性来实现近大远小的效果，这种效果就是透视属性
+注意点：
+1.perspective属性要添加到想看的近大远小效果的元素的父元素上面
+2.perspective的取值为具体的数字+px
+
+-->
+<body>
+    <ul>
+        <li><img src="img/x.jpg" alt=""></li>
+        <li><img src="img/y.jpg" alt=""></li>
+        <li><img src="img/z.jpg" alt=""></li>
+    </ul>
+</body>
+
+</html>

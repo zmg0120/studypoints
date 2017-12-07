@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>056-2D转换.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			width: 500px;
+			height: 600px;
+			border: 1px solid #000;
+			margin:0 auto;
+		}
+		ul li{
+			width: 80px;
+			height: 50px;
+			margin:0 auto;
+			text-align: center;
+			line-height: 50px;
+			list-style: none;
+			background-color: red;
+			margin-top: 20px;
+		}
+		ul li:nth-child(2){
+			transform: translate(10px,-10px);
+		}
+		ul li:nth-child(3){
+			transform: rotate(-50deg);
+		}
+		ul li:nth-child(4){
+			transform: scale(0.5,1)
+		}
+		ul li:nth-child(5){
+			transform: rotate(50deg) scale(1.5,1.5) translate(10px,-10px);
+		}
+	</style>
+</head>
+<body>
+<!--
+1.什么是2D转换？
+就是让元素发生移动旋转缩放的效果
+
+2.2D转换的类型
+2.1 平移
+transform: translate(水平移动距离,垂直移动距离);
+注意点：移动的距离可以是负数
+2.2 旋转
+transform: rotate(旋转度数);
+注意点：度数的单位是deg,可以是负数
+2.3 缩放
+transform: scale(水平缩放比例,垂直缩放比例)
+注意点：
+默认的缩放比例是1
+缩放比例可以是小数，小于1是缩小，大于1是放大
+
+3.2D转换复合写法
+将各个属性用空格隔开即可
+注意点，元素旋转后的坐标系会发生变化
+
+-->
+<ul>
+		<li>默认的</li>
+		<li>平移的</li>
+		<li>旋转的</li>
+		<li>缩放的</li>
+		<li>综合的</li>
+	</ul>	
+</body>
+</html>

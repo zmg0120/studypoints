@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>051-网页布局-固定定位.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+		}
+		.box1{
+			background-color: #f00;
+		}
+		.box2{
+			background-color: #ff0;
+			position: fixed;
+			top:20px;
+			left:0px;
+		}
+		.box3{
+			background-color: #0ff;
+			width: 200px;
+			height: 2000px;
+		}
+/*		.father{
+			width: 300px;
+			height: 300px;
+			background-color: gray;
+			position: relative;
+		}*/
+		span{
+			width: 200px;
+			height: 200px;
+			background-color: #ff0;
+			position: static;
+			/*display: block;*/
+		}
+	</style>
+</head>
+<body>
+<!-- 
+1.什么是固定定位？	
+固定定位就是参照body发生位置的移动
+
+2.注意点
+2.1 固定定位是脱离标准流的 
+2.2 不会随着滚动条的移动而移动
+2.3 始终参考的都是body
+2.4 不区分块状，行内，行内块状
+
+-->
+<!-- <div class="box1"></div> -->
+<!-- <div class="father"></div> -->
+<!-- <div class="box2"></div>
+<div class="box3">我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br>我是文字<br></div> -->
+<span>我是span</span>
+</body>
+</html>

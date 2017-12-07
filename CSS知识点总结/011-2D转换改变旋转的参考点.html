@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>057-2D转换改变旋转的参考点.html</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        margin: 50px auto;
+        position: relative;
+    }
+
+    ul li {
+        list-style: none;
+        width: 200px;
+        height: 200px;
+        /*margin: 50px auto;*/
+        position: absolute;
+        top:0px;
+        left:0px;
+        /*transform-origin: 0px 0px;*/
+        /*transform-origin: 10px 10px;*/
+        /*transform-origin: 50% 0;*/
+          transform-origin: center center;
+    }
+
+    ul li:nth-child(1) {
+        background-color: red;
+        transform: rotate(30deg);
+    }
+
+    ul li:nth-child(2) {
+        background-color: blue;
+        transform: rotate(60deg);
+    }
+
+    ul li:nth-child(3) {
+        background-color: green;
+        transform: rotate(80deg);
+    }
+    </style>
+</head>
+
+<body>
+<!--
+1.元素默认的旋转参考点是自身的中心点
+2.可以通过transform-origin来修改旋转的参考点
+格式：transform-origin：水平距离 垂直距离
+2.1 数值+px
+2.2 可以是百分比
+2.3 可以使用英文单词
+水平方向上的有：left center right
+垂直方向上的有：top center bottom
+-->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

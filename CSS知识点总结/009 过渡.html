@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>054-过渡.html</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    div {
+        width: 100px;
+        height: 50px;
+        background-color: red;
+        /*			transition-property:margin-left,background-color;
+			transition-duration: 3s,3s; */
+    /*    transition-property: width;
+        transition-duration: 3s;
+        transition-delay: 2s;*/
+   /*     transition:width 3s linear 2s,background-color 3s linear 2s;*/
+        /*transition:background-color 3s linear 2s;*/
+        transition:all 3s;
+    }
+
+    div:hover {
+        /*			margin-left: 300px;
+			background-color: blue;*/
+        width: 300px;
+        background-color: blue;
+    }
+
+    ul {
+        width: 500px;
+        height: 600px;
+        margin: 20px auto;
+        border: 1px solid #000;
+    }
+
+    ul li {
+        width: 100px;
+        height: 30px;
+        background-color: blue;
+        list-style: none;
+        margin-top: 20px;
+    }
+    /*	ul li:nth-child(1):hover{
+			margin-left: 300px;
+		}*/
+
+    ul li {
+        transition-property: margin-left;
+        transition-duration: 3s;
+    }
+
+    ul:hover li {
+        margin-left: 400px;
+    }
+
+    ul li:nth-child(2) {
+        transition-timing-function: linear;
+    }
+
+    ul li:nth-child(3) {
+        transition-timing-function: ease;
+    }
+
+    ul li:nth-child(4) {
+        transition-timing-function: ease-in;
+    }
+
+    ul li:nth-child(5) {
+        transition-timing-function: ease-out;
+    }
+
+    ul li:nth-child(6) {
+        transition-timing-function: ease-in-out;
+    }
+    </style>
+</head>
+
+<body>
+    <!--
+1.什么是过渡？
+过渡就是让元素的状态逐渐发生变化的效果
+
+2.如果添加过渡
+只要满足过渡三要素就可以
+2.1 元素有属性发生变化，并且变化的属性在一个触发事件当中
+2.2 给需要过渡的元素添加transition-property，来告诉浏览器那个属性需要过渡
+2.3 给需要过渡的元素添加transition-duration，告诉浏览器过渡的执行时间
+
+3.多个属性要过渡的写法
+将多个属性用逗号隔开即可
+
+4.延迟过渡的执行
+transition-delay: 2s;
+
+5.执行过渡的速度
+linear
+ease 默认的
+ease-in
+ease-out
+ease-in-out
+
+6.过渡复合样式的写法
+6.1 一组属性的每个属性用空格隔开
+transition:需要过渡的属性 执行过渡的时间 执行过渡的速度 延迟时间;
+6.2 多组属性之间用逗号隔开
+transition:width 3s linear 2s,background-color 3s linear 2s;
+6.3 如果有多个属性发生同样的过渡效果的话可以把多个属性简写为all
+transition:all 3s;
+-->
+    <div></div>
+    <ul>
+        <li>默认的</li>
+        <li>linear</li>
+        <li>ease</li>
+        <li>ease-in</li>
+        <li>ease-out</li>
+        <li>ease-in-out</li>
+    </ul>
+</body>
+
+</html>
