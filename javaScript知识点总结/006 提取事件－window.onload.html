@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>18-提取事件.html</title>
+	<style>
+		#div1{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+		}
+	</style>
+	<script>
+	window.onload = function(){
+		var oBtn = document.getElementById('btn1');
+		oBtn.onclick = function(){ //匿名函数
+			var oDiv = document.getElementById('div1');
+			oDiv.style.background = 'red';
+		}
+	}	
+	</script>
+</head>
+<body>
+	<input id="btn1" type="button" value="变红" >
+	<div id="div1"></div>
+
+</body>
+</html>

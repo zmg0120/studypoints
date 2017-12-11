@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>21-获取页面多个元素.html</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			margin-right: 10px;
+			float: left;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var aDiv = document.getElementsByTagName('div');
+			//数组
+			// alert(aDiv.length);
+			// aDiv.style.background = 'red';
+			// aDiv[0].style.background = 'red';
+			// aDiv[1].style.background = 'red';
+			// aDiv[2].style.background = 'red';
+			// aDiv[3].style.background = 'red';
+			// aDiv[4].style.background = 'red';
+			for(var i =0;i<aDiv.length;i++){
+				aDiv[i].style.background = 'red';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

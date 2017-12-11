@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script>
+		//规则0：函数本身是一个特殊类型，大多数时候，可以认为是一个变量。
+			/*
+			function a(){
+				alert(this);
+			}
+			a();  //window
+			var b = function(){
+				alert(this);
+			}
+			b(); //window
+			*/
+
+
+		//规则1：如果一个函数，是某个对象的key 值，那么，this就指向这个对象。 
+		/*
+		var c = function(obj){
+			alert(this == obj );
+		}
+		var o = {};
+		o.fun = c;
+		o.fun(d);
+		此时的this就指向了o 
+
+		函数就是一个变量，但是可以绑定到某个对象的下面，并且 this 就会指向 o 对象。 
+		这里必须要注意，没有被绑定的对象，默认this 指向window 对象
+		*/
+
+
+		//如果函数new 了一下，那么就会创建一个对象，并且this 指向 新创建的对象
+		/*
+		var a = function(){
+			alert(this);
+		}
+		function a(){
+			alert(this);
+		}
+		var aa = new a(); //object
+		a(); //window
+		*/
+		
+
+		//通过apply 可以改变this 的指向
+		var a = function(o){
+			alert(this === o);
+		}
+		var obj = {};
+		/*
+		1、
+			obj.fun = a;
+			obj.fun(obj);
+		2、
+			a.apply(obj,[obj]);
+		3、
+			a.call(obj,obj);
+		*/
+		// a.call(obj,obj)第一个参数obj a函数里面的this指向了obj 
+		// a.call(obj,obj)第二个参数obj 传给了a函数 o 
+
+			
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

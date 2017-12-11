@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>05-初学者常见问题汇总.html</title>
+	<style>
+		#div1{
+			width: 100px;
+			height: 100px;
+			background: gray;
+
+		}
+	</style>
+</head>
+<body>
+<!--
+1.同一个元素，同样的事件只能写一个
+2.JS代码式区分大小写的
+3.使用单双引号时要注意配对关系
+4.JS用style修改属性时，如果CSS的属性有"-"的话，通常把"-"去掉，然后把"-"后面的单词首字母大写
+-->
+<!-- <input type="button" onmouseover="alert('a');" onmouseover="alert('b')" > -->
+<input type="button" onmouseover="document.getElementById('div1').style.backgroundColor='red'"  >
+<!-- <input type="text" id='tex1' value="" title="qqqq" >
+<input type="button" value="写字" onclick="document.getElementById('tex1').title='www'"> -->
+<div id="div1"></div>	
+</body>
+</html>

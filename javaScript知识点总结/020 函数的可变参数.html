@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>47-函数的可变参数.html</title>
+	<script>
+	/*
+		function sum(n1,n2,n3){
+			return n1+n2+n3;
+		}
+
+		alert(sum(3,4,5));
+	*/
+		function sum(){
+			// alert(arguments.length);
+			// alert(arguments[0]);
+			var result = 0;
+			for(var i=0;i<arguments.length;i++){
+				result += arguments[i];
+			}
+			return result;
+		}
+		alert(sum(1,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

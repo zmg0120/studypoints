@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>017-JS弹出菜单.html</title>
+    <style>
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+    	li{
+    		list-style: none;
+    	}
+    	#sub{
+    		display: none;
+    	}
+    </style>
+    <script>
+    /*
+    if(条件)｛ 真／假
+		code1
+    ｝else{
+		code2
+    } 
+     */
+
+    	function show(){
+    	 	var oDiv = document.getElementById('sub');
+
+    	 	if(oDiv.style.display == 'block'){
+    	 		oDiv.style.display = 'none';
+                // alert('a');
+    	 	}else{
+    	 		oDiv.style.display = 'block';
+    	 	}	
+   		 }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="新闻" onclick="show()">
+    <div id="sub">
+        <ul>
+            <li>微博1</li>
+            <li>微博2</li>
+            <li>微博3</li>
+            <li>微博4</li>
+            <li>微博5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

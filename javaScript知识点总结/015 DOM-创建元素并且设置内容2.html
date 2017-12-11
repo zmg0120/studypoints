@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>66-DOM-创建元素并且设置内容2.html</title>
+	<script>
+		window.onload = function(){
+			var oBtn = document.getElementById('btn1');
+			var oUl = document.getElementById('ul1');
+			var oTxt = document.getElementById('txt1');
+			oBtn.onclick = function(){
+				var oLi = document.createElement('li');
+				oLi.innerHTML = oTxt.value;
+				// var firstLi = oUl.getElementsByTagName('li')[0];
+
+				var firstLi = oUl.firstElementChild;
+				// oUl.appendChild(oLi);
+				// 父元素.insertBefore(需要插入的元素,在谁前面插入);
+				oUl.insertBefore(oLi,firstLi);
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="txt1">
+	<input type="button" value="创建元素" id="btn1">
+	<ul id="ul1">
+	</ul>
+</body>
+</html>
